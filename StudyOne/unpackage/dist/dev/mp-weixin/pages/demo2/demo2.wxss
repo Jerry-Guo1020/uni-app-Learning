@@ -1,0 +1,5 @@
+
+.btn1 {
+	width: 150px;
+	height: 45px;
+}

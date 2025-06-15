@@ -1,0 +1,76 @@
+
+.container.data-v-614d9068 {
+  min-height: 100vh;
+  background: linear-gradient(180deg, #FFD9A0 0%, #FFF6ED 100%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  -webkit-animation: fade-in-data-v-614d9068 2s ease-out forwards;
+          animation: fade-in-data-v-614d9068 2s ease-out forwards;
+}
+
+/* 淡出动画 */
+.fade-out.data-v-614d9068 {
+  -webkit-animation: fade-out-data-v-614d9068 2s ease-in forwards;
+          animation: fade-out-data-v-614d9068 2s ease-in forwards;
+}
+@-webkit-keyframes fade-in-data-v-614d9068 {
+from {
+    opacity: 0;
+}
+to {
+    opacity: 1;
+}
+}
+@keyframes fade-in-data-v-614d9068 {
+from {
+    opacity: 0;
+}
+to {
+    opacity: 1;
+}
+}
+@-webkit-keyframes fade-out-data-v-614d9068 {
+from {
+    opacity: 1;
+}
+to {
+    opacity: 0;
+}
+}
+@keyframes fade-out-data-v-614d9068 {
+from {
+    opacity: 1;
+}
+to {
+    opacity: 0;
+}
+}
+.avatar-box.data-v-614d9068 {
+  margin-top: 180rpx;
+  margin-bottom: 40rpx;
+}
+.avatar.data-v-614d9068 {
+  width: 260rpx;
+  height: 260rpx;
+  border-radius: 50%;
+  background: #fff;
+}
+.title.data-v-614d9068 {
+  font-size: 44rpx;
+  color: #FF9900;
+  font-weight: bold;
+  margin-top: 40rpx;
+  margin-bottom: 400rpx;
+}
+.subtitle.data-v-614d9068 {
+  position: absolute;
+  bottom: 60rpx;
+  width: 100%;
+  text-align: center;
+  color: #FFA940;
+  font-size: 24rpx;
+  line-height: 40rpx;
+}
+
