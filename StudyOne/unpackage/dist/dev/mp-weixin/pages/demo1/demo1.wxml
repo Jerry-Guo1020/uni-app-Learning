@@ -1,1 +1,1 @@
-<view> this is demo one! </view>
+<view><swiper indicator-dots indicator-active-color="orange" circular autoplay interval="1000"><swiper-item>1</swiper-item><swiper-item>2</swiper-item><swiper-item>3</swiper-item><swiper-item>4</swiper-item><swiper-item>5</swiper-item><swiper-item>6</swiper-item><swiper-item>7</swiper-item><swiper-item>8</swiper-item><swiper-item>9</swiper-item></swiper></view>
