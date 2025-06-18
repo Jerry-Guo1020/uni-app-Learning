@@ -23,16 +23,20 @@
 /* 垂直间距 */
 /* 透明度 */
 /* 文章场景相关 */
-swiper {
+swiper.data-v-eb3f1cf4 {
   width: 100vw;
   height: 200px;
   border: 1px solid pink;
 }
-swiper swiper-item {
+swiper swiper-item.data-v-eb3f1cf4 {
   width: 100%;
   height: 100%;
   background: green;
 }
-swiper swiper-item:nth-child(2n) {
+swiper swiper-item.data-v-eb3f1cf4:nth-child(2n) {
   background-color: skyblue;
+}
+.pict1.data-v-eb3f1cf4 {
+  width: 350px;
+  height: 250px;
 }
