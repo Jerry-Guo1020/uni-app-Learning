@@ -1,0 +1,1 @@
+{"version":3,"file":"demo9.js","sources":["F:/HBuilderX/plugins/uniapp-cli-vite/uniPage:/cGFnZXMvZGVtbzkvZGVtbzkudnVl"],"sourcesContent":["import MiniProgramPage from 'D:/uni-app/StudyOne/pages/demo9/demo9.vue'\nwx.createPage(MiniProgramPage)"],"names":[],"mappings":";;;;;;;;;;;;;;;;;;;;;;;;;;;;;AACA,GAAG,WAAW,eAAe;"}

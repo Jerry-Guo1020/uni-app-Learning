@@ -1,5 +1,18 @@
 {
   "setting": {
     "compileHotReLoad": false
+  },
+  "condition": {
+    "miniprogram": {
+      "list": [
+        {
+          "name": "pages/demo8/demo8",
+          "pathName": "pages/demo8/demo8",
+          "query": "",
+          "scene": null,
+          "launchMode": "default"
+        }
+      ]
+    }
   }
 }

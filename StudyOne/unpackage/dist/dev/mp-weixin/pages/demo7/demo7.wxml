@@ -1,0 +1,1 @@
+<view class="box"><view>京东</view><view wx:if="{{false}}">京东</view><view wx:else>淘宝</view><view wx:if="{{a}}">京东</view><view wx:if="{{true}}"><image src="{{b}}"></image></view><view hidden="{{!true}}"><image src="{{c}}"></image></view></view>

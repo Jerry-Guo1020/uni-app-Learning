@@ -5,6 +5,14 @@ if (!Math) {
   "./pages/index/index.js";
   "./pages/demo1/demo1.js";
   "./pages/demo2/demo2.js";
+  "./pages/demo3/demo3.js";
+  "./pages/demo4/demo4.js";
+  "./pages/demo5/demo5.js";
+  "./pages/demo6/demo6.js";
+  "./pages/demo7/demo7.js";
+  "./pages/demo8/demo8.js";
+  "./pages/demo9/demo9.js";
+  "./pages/demo10/demo10.js";
 }
 const _sfc_main = {
   onLaunch: function() {

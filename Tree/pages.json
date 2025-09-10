@@ -65,12 +65,7 @@
 				"navigationBarTitleText" : "nicking页面"
 			}
 		},
-		{
-			"path" : "pages/category/category",
-			"style" : 
-			{
-				"navigationBarTitleText" : "category页面"
-			}
+		
 		}
 		
 	],

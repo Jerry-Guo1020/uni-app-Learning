@@ -1,213 +1,309 @@
 <template>
-  <view class="container">
-    <view class="top">
-      <image class="tree" src="/static/tree-main.png" alt="树洞主logo"></image>
-      <view class="slogan">我们都需要一个心灵树洞</view>
-      <view class="tags">
-        <view class="tag tag1">#学业压力</view>
-        <view class="tag tag2">#情绪情感</view>
-        <view class="tag tag3">#人际交往</view>
-        <view class="tag tag4">#职业规划</view>
-        <view class="tag tag5">#生活适应</view>
-        <view class="tag tag6">#其他类型</view>
+	<view>
+  <!-- 顶部一张树洞照片 -->
+  <view class="page">
+    <image src="@/static/首页第一张.png" class="top-image" mode="widthFix" />
+  </view>
+
+  <!-- 顶部标签区域 -->
+  <view class="tags">
+    <view class="tag_orange">#学业压力</view>
+    <view class="tag_pink">#情绪情感</view>
+    <view class="tag_yellow">#人机交往</view>
+    <view class="tag_purple">#职业规划</view>
+    <view class="tag_blue">#生活适应</view>
+    <view class="tag_green">#其他类型</view>
+  </view>
+
+  <!-- 动态卡片内容 -->
+  <view class="card">
+    <!-- 用户头像 -->
+    <view class="user">
+      <image src="@/static/头像.png" class="user_logo" mode="aspectFill" />
+      <view class="user_info">
+        <view class="userName">大学生心理树洞</view>
+        <view class="dateTime">2025年6月24日16:05:34</view>
       </view>
     </view>
-    <view class="post-list">
-      <view class="post">
-        <view class="post-header">
-          <image class="avatar" src="/static/avatar-main.png" alt="头像"></image>
-          <view>
-            <view class="post-title">大学生心灵树洞</view>
-            <view class="post-time">2025年05月19日 17:46:50</view>
-          </view>
+
+    <!-- 基础信息 -->
+    <view class="info">
+      <view class="choiceTag">#情绪情感</view>
+      <view class="title">六月心事，等你诉说~</view>
+    </view>
+
+    <!-- 内容 -->
+    <view class="content">
+      六月的风，吹来了蝉鸣与栀子花香，也吹进了每个人的心房。在这个充满活力与希望的月份，大学生心灵树洞向大家发起征稿啦!
+      <br />
+      无论是你在六月里邂逅的小美好--比如一场浪漫的雨后彩虹，一次和朋友的欢乐野餐还是那些藏在心底的小烦恼-一像是考试的压力，对未来方向的迷茫;
+      亦或是你对六月独有的期许与展望……都欢迎分享给我们……
+    </view>
+
+    <view class="photo">
+      <image src="@/static/1.jpg" class="contentPhoto" mode="widthFix" />
+    </view>
+
+    <!-- 点赞评论收藏 -->
+    <view class="emogi">
+      <text>🤍</text>
+      <text>⭐</text>
+    </view>
+
+    <!-- 评论区 -->
+    <view class="talking">
+      <!-- 用户一 -->
+      <view class="userTalking">
+        <view class="userTalkingInfo">
+          <image src="@/static/头像.png" class="userTalkLogo" mode="aspectFill" />
+          <view class="talkingUserName">陈树洞</view>
         </view>
-        <view class="post-tags">
-          <view class="post-tag">#树洞倾诉</view>
-          <view class="post-tag">六月心事，等你诉说</view>
-        </view>
-        <view class="post-content">
-          六月的风，吹来了弹唱与玩笑，也吹进了每个人的心房。在这个充满活力与希望的月份，大学生心灵树洞向大家发起邀约啦！<br>
-          无论是徘徊在分岔路口的小迷茫，或是一场想爆哭的雨后彩虹，一次和朋友的欢乐新聚；还是想和纸笔低语的心情故事……<br>
-          都欢迎分享给我们！
-        </view>
-        <image class="post-img" src="/static/beach.png" alt="沙滩图片"></image>
-        <view class="post-actions">
-          <image src="/static/icon-comment.png" class="icon" alt="评论"></image>
-          <image src="/static/icon-like.png" class="icon" alt="点赞"></image>
-          <image src="/static/icon-fav.png" class="icon" alt="收藏"></image>
-        </view>
-        <view class="post-footer">
-          <image class="footer-avatar" src="/static/avatar1.png" alt="头像"></image>
-          <view class="footer-name">陈树洞</view>
-          <view class="footer-comment">考完试就一定更美好啦！！！</view>
-        </view>
-        <view class="post-footer">
-          <image class="footer-avatar" src="/static/avatar2.png" alt="头像"></image>
-          <view class="footer-name">树小洞2025</view>
-          <view class="footer-comment">未来要干嘛啊？好焦虑……</view>
-        </view>
+        <view class="talkAbout">考完试我一定要去海边！！！</view>
+        <view class="dateTime">2分钟前</view>
       </view>
-      <!-- 可继续添加更多post -->
+
+      <!-- 用户二 -->
+      <view class="userTalking">
+        <view class="userTalkingInfo">
+          <image src="@/static/头像.png" class="userTalkLogo" mode="aspectFill" />
+          <view class="talkingUserName">树小洞2025</view>
+        </view>
+        <view class="talkAbout">考完试我一定要去海边！！！</view>
+        <view class="dateTime">2分钟前</view>
+      </view>
     </view>
-    <view class="tabbar">
-      <image src="/static/tab-home.png" class="tab-icon" alt="首页"></image>
-      <image src="/static/tab-help.png" class="tab-icon" alt="求助"></image>
-      <image src="/static/tab-tree.png" class="tab-icon center" alt="树洞"></image>
-      <image src="/static/tab-message.png" class="tab-icon" alt="消息"></image>
-      <image src="/static/tab-mine.png" class="tab-icon" alt="我的"></image>
-    </view>
+  </view>
   </view>
 </template>
 
-<script>
-export default {
-  name: 'Home'
-}
+<script setup>
+// uni-app 无需改动 script，如果你需要数据或逻辑可按需要添加
 </script>
 
-<style scoped>
-.container {
-  min-height: 100vh;
-  background: linear-gradient(180deg, #FFD9A0 0%, #FFF6ED 100%);
-  padding-bottom: 120rpx;
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
-.top {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin-top: 40rpx;
+
+body {
+    background-color: #ffffff;
 }
-.tree {
-  width: 260rpx;
-  height: 180rpx;
+
+.page {
+    width: auto;
+    margin: 0 auto;
+    padding-bottom: 10px;
 }
-.slogan {
-  font-size: 32rpx;
-  font-weight: bold;
-  margin: 24rpx 0 32rpx 0;
-  color: #222;
+
+.top-image {
+    width: 100%;
+    display: block;
+    height: auto;
 }
+
+
 .tags {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  margin-bottom: 32rpx;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 10px;
+    gap: 18px;
+    border-bottom: 1px solid #f6f6f6;
 }
-.tag {
-  font-size: 22rpx;
-  padding: 12rpx 28rpx;
-  border-radius: 32rpx;
-  margin: 8rpx;
-  color: #fff;
+
+.tag_orange {
+    border: none;
+    border-radius: 20px;
+    background-color: #ffdfbc;
+    padding: 6px 12px;
+    font-size: 14px;
+    width: 100px;
+    text-align: center;
+    color: #ff7700;
+    font-weight: bolder;
+}
+
+.tag_pink {
+    border: none;
+    border-radius: 50px;
+    background-color: #ffcad8;
+    padding: 6px 12px;
+    font-size: 14px;
+    width: 100px;
+    text-align: center;
+    color: #ff004d;
+    font-weight: bolder;
+}
+
+.tag_yellow {
+    border: none;
+    border-radius: 50px;
+    background-color: #fff4ce;
+    padding: 6px 12px;
+    font-size: 14px;
+    width: 100px;
+    text-align: center;
+    color: #ffbd00;
+    font-weight: bolder;
+}
+
+.tag_purple {
+    border: none;
+    border-radius: 50px;
+    background-color: #e7cbff;
+    padding: 6px 12px;
+    font-size: 14px;
+    width: 100px;
+    text-align: center;
+    color: #ae4fff;
+    font-weight: bolder;
+}
+
+.tag_blue {
+    border: none;
+    border-radius: 50px;
+    background-color: #ceedf7;
+    padding: 6px 12px;
+    font-size: 14px;
+    width: 100px;
+    text-align: center;
+    color: #00a0e9;
+    font-weight: bolder;
+}
+
+.tag_green {
+    border: none;
+    border-radius: 50px;
+    background-color: #ddfed7;
+    padding: 6px 12px;
+    font-size: 14px;
+    width: 100px;
+    text-align: center;
+    color: #7df625;
+    font-weight: bolder;
+}
+
+.card {
+  background-color: white;
+  margin: 10px;
+  padding: 20px; 
+  border-radius: 20px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+}
+
+
+.user_logo {
+    border-radius: 50px;
+    width: 50px;
+    height: 50px;
+    border: 3px solid #4a9364;
+    object-fit: cover;             /* 确保照片不变形 */
+}
+
+.user {
+    display: flex;
+    align-items: center;
+}
+
+
+.user_info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: 12px;
+
+}
+
+.userName {
+    font-weight: bold;
+    font-size: 14px;
+    font-family: "AlimamaFangYuanTiVF Medium", sans-serif;
+    color: #333;
+    margin-bottom: 4px;
+}
+
+.dateTime {
+    font-size: 9px;
+    color: #888;
+}
+
+.info {
+  margin-top: 6px;
+  display: flex;
+  align-items: center;     /* 让两个元素在同一行垂直居中 */
+  gap: 10px;               /* 控制间距 */
+  margin-bottom: 10px;         
+}
+
+
+.choiceTag {
+  display: inline-block;
+  background-color: #f57fa0;
+  color: white;
+  padding: 4px 10px;
+  border-radius: 20px;
+  font-size: 8px;
+ 
+}
+
+.title {
   font-weight: bold;
-}
-.tag1 { background: #FFA940; }
-.tag2 { background: #FF6F91; }
-.tag3 { background: #FFD666; color: #333; }
-.tag4 { background: #B37FEB; }
-.tag5 { background: #5CDBD3; color: #333; }
-.tag6 { background: #B7EB8F; color: #333; }
-.post-list {
-  padding: 0 24rpx;
-}
-.post {
-  background: #fff;
-  border-radius: 24rpx;
-  margin-bottom: 32rpx;
-  padding: 32rpx 24rpx;
-  box-shadow: 0 8rpx 32rpx #f6e7d6;
-}
-.post-header {
-  display: flex;
-  align-items: center;
-  margin-bottom: 12rpx;
-}
-.avatar {
-  width: 64rpx;
-  height: 64rpx;
-  border-radius: 50%;
-  margin-right: 16rpx;
-}
-.post-title {
-  font-size: 28rpx;
-  font-weight: bold;
-}
-.post-time {
-  font-size: 20rpx;
-  color: #888;
-}
-.post-tags {
-  display: flex;
-  margin: 12rpx 0;
-}
-.post-tag {
-  background: #FFF7E6;
-  color: #FF9900;
-  border-radius: 24rpx;
-  padding: 4rpx 16rpx;
-  font-size: 20rpx;
-  margin-right: 12rpx;
-}
-.post-content {
-  font-size: 26rpx;
+  font-size: 8px;
   color: #333;
-  margin: 12rpx 0;
-  line-height: 1.6;
 }
-.post-img {
-  width: 100%;
-  height: 180rpx;
-  border-radius: 16rpx;
-  margin: 16rpx 0;
-  object-fit: cover;
+
+.content {
+    font-size: 10px;
 }
-.post-actions {
-  display: flex;
-  align-items: center;
-  margin: 8rpx 0;
+
+.contentPhoto{
+    margin-top: 5px;
+    width: 100%;
+    display: block;
+    height: auto;
 }
-.icon {
-  width: 36rpx;
-  height: 36rpx;
-  margin-right: 24rpx;
+
+.emogi{
+    display: flex;
+    justify-content: flex-end;
+    margin: 10px;
 }
-.post-footer {
-  display: flex;
-  align-items: center;
-  margin-top: 8rpx;
+
+.talking{
+  background-color: #f2f2f2;
+  border-radius: 8px;
 }
-.footer-avatar {
-  width: 40rpx;
-  height: 40rpx;
-  border-radius: 50%;
-  margin-right: 8rpx;
+
+.userTalkingInfo {
+    display: flex;
+    padding: 10px;
+    
 }
-.footer-name {
-  font-size: 22rpx;
-  font-weight: bold;
-  margin-right: 8rpx;
+
+.userTalkLogo{
+    border-radius: 50px;
+    width: 20px;
+    height: 20px;
+    border: 2px solid #4a9364;
+    object-fit: cover;             /* 确保照片不变形 */
 }
-.footer-comment {
-  font-size: 22rpx;
-  color: #666;
+
+
+.talkingUserName {
+    font-weight: bold;
+    font-size: 14px;
+    font-family: "AlimamaFangYuanTiVF Medium", sans-serif;
+    color: #333;
+    margin-bottom: 4px;
 }
-.tabbar {
-  position: fixed;
-  left: 0; right: 0; bottom: 0;
-  height: 100rpx;
-  background: #222;
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  z-index: 10;
+
+.talkAbout {
+    margin-left: 10px;
 }
-.tab-icon {
-  width: 64rpx;
-  height: 64rpx;
-}
-.center {
-  width: 80rpx;
-  height: 80rpx;
-  margin-bottom: 24rpx;
+
+.dateTime{
+    margin-left: 10px;
 }
 </style>

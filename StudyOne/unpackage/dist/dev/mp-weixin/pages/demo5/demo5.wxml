@@ -1,0 +1,1 @@
+<view><image src="{{a}}"></image><image src="{{b}}"></image><image src="{{c}}"></image><image src="{{d}}"></image></view><view class="{{['box']}}"> v-bind 的指令 </view><view class="{{['box', e]}}"> v-bind 的指令 </view>

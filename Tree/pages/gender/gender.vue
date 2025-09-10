@@ -1,118 +1,160 @@
 <template>
   <view class="container">
-    <view class="header">
-      <image class="logo" src="/static/tree-logo.png" alt="树洞logo"></image>
-      <view class="hello">Hello!</view>
-      <view class="desc">欢迎来到大学生心灵树洞</view>
-    </view>
-    <view class="card">
-      <view class="title">请选择你的性别</view>
-      <view class="gender-options">
-        <view class="option" :class="{active: gender==='male'}" @click="gender='male'">
-          <image src="/static/boy.png" alt="男生头像"></image>
-          <view>男生</view>
+    <view class="title">
+      <view class="section1">
+        <view class="logo">
+          <image src="http://43.142.21.211:3000/static/logo.png" mode="aspectFill" class="logoPhoto" />
         </view>
-        <view class="option" :class="{active: gender==='female'}" @click="gender='female'">
-          <image src="/static/girl.png" alt="女生头像"></image>
-          <view>女生</view>
+        <view class="hello">Hello!</view>
+      </view>
+      <view class="section2">
+        <text class="s2Content">欢迎来到心理树洞！</text>
+      </view>
+    </view>
+
+    <view class="card">
+      <view class="cardTitle">请选择您的性别</view>
+      <view class="sex">
+        <view class="boy" :class="{ active: gender === 'male' }" @tap="selectGender('male')">
+          <image src="http://43.142.21.211:3000/static/男生.png" mode="aspectFill" class="boyLogo" :class="{ active: gender === 'male' }" />
+          <view class="boyName">男生</view>
+        </view>
+        <view class="girl" :class="{ active: gender === 'female' }" @tap="selectGender('female')">
+          <image src="http://43.142.21.211:3000/static/女生.png" mode="aspectFill" class="girlLogo" :class="{ active: gender === 'female' }" />
+          <view class="girlName">女生</view>
         </view>
       </view>
-      <button class="next-btn" @click="goNext">→</button>
+      <button class="btn" @tap="goNext">→</button>
     </view>
   </view>
 </template>
 
-<script>
-export default {
-  data() {
-    return {
-      gender: ''
-    }
-  },
-  methods: {
-    goNext() {
-      if (!this.gender) {
-        uni.showToast({ title: '请选择性别', icon: 'none' });
-        return;
-      }
-      uni.navigateTo({ url: '/pages/info/info?gender=' + this.gender });
-    }
+<script setup>
+import { ref } from 'vue'
+
+const gender = ref('')
+
+const selectGender = (value) => {
+  gender.value = value
+}
+
+const goNext = () => {
+  if (!gender.value) {
+    uni.showToast({
+      title: '请选择性别',
+      icon: 'none'
+    })
+    return
   }
+
+  uni.navigateTo({
+    url: `/pages/info/info?gender=${gender.value}`
+  })
 }
 </script>
 
 <style scoped>
 .container {
-  min-height: 100vh;
-  background: linear-gradient(180deg, #FFD9A0 0%, #FFF6ED 100%);
-}
-.header {
-  display: flex;
-  align-items: center;
-  margin-top: 40rpx;
-  margin-left: 40rpx;
-}
-.logo {
-  width: 60rpx;
-  height: 60rpx;
-}
-.hello {
-  font-size: 36rpx;
-  font-weight: bold;
-  margin-left: 16rpx;
-}
-.desc {
-  font-size: 22rpx;
-  color: #888;
-  margin-left: 16rpx;
-}
-.card {
-  background: #fff;
-  border-radius: 24rpx;
-  margin: 80rpx 32rpx 0 32rpx;
-  padding: 48rpx 0 80rpx 0;
-  box-shadow: 0 8rpx 32rpx #f6e7d6;
   display: flex;
   flex-direction: column;
+  height: 100vh;
+  background: linear-gradient(to bottom, #ffd8b1, #ffffff);
+}
+
+.card {
+  width: 90%;
+  max-width: 750rpx;
+  margin: 0 auto;
+  background: #fff;
+  border-radius: 30rpx 30rpx 0 0;
+  padding: 40rpx;
+  margin-top: 20rpx;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  box-sizing: border-box;
   align-items: center;
 }
+
 .title {
-  font-size: 32rpx;
-  font-weight: bold;
-  margin-bottom: 48rpx;
+  margin: 60rpx;
+  display: flex;
+  padding-top: 120rpx;
+  flex-direction: column;
 }
-.gender-options {
+
+.section1 {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.section2 {
+  font-size: 30rpx;
   display: flex;
   justify-content: center;
-  margin-bottom: 60rpx;
+  margin-top: 10rpx;
 }
-.option {
+
+.logoPhoto {
+  width: 80rpx;
+  height: 80rpx;
+}
+
+.hello {
+  font-size: 70rpx;
+  font-weight: bolder;
+  margin-left: 20rpx;
+}
+
+.cardTitle {
+  font-size: 40rpx;
+  margin-top: 60rpx;
+}
+
+.sex {
+  display: flex;
+  justify-content: center;
+  margin-top: 120rpx;
+  margin-bottom: 120rpx;
+}
+
+.boy,
+.girl {
   display: flex;
   flex-direction: column;
+  justify-content: center;
   align-items: center;
-  margin: 0 40rpx;
-  border: 4rpx solid transparent;
-  border-radius: 50%;
-  padding: 12rpx;
-  transition: border 0.2s;
+  margin: 40rpx;
 }
-.option.active {
-  border-color: #FF9900;
-  background: #FFF7E6;
+
+.boyLogo,
+.girlLogo {
+  border-radius: 100rpx;
+  width: 240rpx;
+  height: 240rpx;
+  object-fit: cover;
 }
-.option image {
-  width: 120rpx;
+
+.boyLogo.active,
+.girlLogo.active {
+  border: 6rpx solid #ff9900;
+  background-color: #fff7e6;
+}
+
+.boy.active,
+.girl.active {
+  background-color: #fff7e6;
+  border-radius: 40rpx;
+}
+
+.btn {
+  width: 240rpx;
   height: 120rpx;
-  margin-bottom: 12rpx;
-}
-.next-btn {
-  width: 120rpx;
-  height: 60rpx;
-  background: #FF9900;
+  background: #ff9900;
   color: #fff;
-  border-radius: 32rpx;
-  font-size: 36rpx;
+  border-radius: 64rpx;
+  font-size: 72rpx;
   border: none;
-  margin-top: 20rpx;
 }
 </style>
